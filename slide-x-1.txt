@@ -1,0 +1,16 @@
+
+
+  # More Tools to Consider
+
+     * Chrome inspector
+     * dtrace finding leaks
+     * raygun
+
+
+
+
+
+
+
+
+
