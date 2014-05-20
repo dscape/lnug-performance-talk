@@ -1,0 +1,3 @@
+dtrace -n 'profile-97/execname == "node" && arg1/{
+    @[jstack(100, 8000)] = count(); } tick-60s { exit(0); }' > stacks.out
+stackvis dtrace flamegraph-svg < stacks.out > stacks.svg

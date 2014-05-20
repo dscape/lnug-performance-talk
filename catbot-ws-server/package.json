@@ -1,0 +1,25 @@
+{
+  "name": "catbot-ws-server",
+  "version": "0.0.0",
+  "description": "Webserver for controlling cat bots",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dscape/catbot-ws-server.git"
+  },
+  "author": "",
+  "license": "apache 2",
+  "bugs": {
+    "url": "https://github.com/dscape/catbot-ws-server/issues"
+  },
+  "dependencies": {
+    "primus-emitter": "~0.1.0",
+    "node-static": "~0.7.0",
+    "primus": "~1.1.2",
+    "ws": "~0.4.27"
+  }
+}

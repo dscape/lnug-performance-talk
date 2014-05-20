@@ -1,0 +1,55 @@
+#!/usr/bin/env node
+var Primus    = require('primus')
+  , Emitter   = require('primus-emitter')
+  , catbot    = require('catbot')
+  , f         = require('frameless')
+  , Socket    = Primus.createSocket(
+    { transformer: 'websockets'
+    , parser: 'JSON'
+    , plugin: { 'emitter': 'primus-emitter' }
+    })
+  ;
+
+f.save(true);
+
+f({ name: 'server', 'default': 'http://localhost:8080' }, function (opts) {
+  var client = new Socket(opts.server);
+
+  catbot(function (err, hardware) {
+    if (!hardware) {
+      throw new Error('`catbot` was not detected! *meow@1!*');
+    }
+
+    if(client.readyState === 0) {
+      throw new Error('connection to server failed. ' + opts.server);
+    }
+
+    hardware.board.repl.inject({ connection : client });
+
+    client.emit('im kat');
+    client.emit('laserStatus', hardware.laser.isOn);
+
+    client.on('x', function (x) {
+      hardware.x.to(Math.floor(x*180));
+    });
+
+    client.on('y', function (y) {
+      hardware.y.to(Math.floor(y*180));
+    });
+
+    client.on('switchLaser', function () {
+      console.log('lasr iz ' + (hardware.laser.isOn ? 'on' : 'off'));
+      hardware.laser.isOn ? hardware.laser.off() : hardware.laser.on();
+      client.emit('laserStatus', hardware.laser.isOn);
+    });
+
+    client.on('paired', function () {
+      console.log('a haz new mastah');
+      client.emit('laserStatus', hardware.laser.isOn);
+    });
+
+    client.on('unpaired', function () {
+      console.log('kitteh wants 2 pulah');
+    });
+  });
+});

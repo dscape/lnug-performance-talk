@@ -1,0 +1,41 @@
+body {
+  color: #444;
+  font-family: "proxima-nova-1", "proxima-nova-2", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  line-height: 22px;
+}
+
+.content img {
+  display: block;
+  height: 40px;
+}
+
+.warn {
+  text-align:center;
+  font-style: italic;
+}
+
+.content li span {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+}
+
+.bar-title {
+  background-image: none;
+  margin: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.bar-tab {
+  background-image: none;
+  margin: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.list li:first-child {
+  border-top: 0;
+}

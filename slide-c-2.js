@@ -1,4 +1,4 @@
-artillery.servers( [ { host: '165.225.137.169', port: 8080 } ] );
+artillery.servers( [ { host: 'meowhost', port: 0xCA7 } ] );
 
 artillery.load([
   artillery.arrival_phase({
