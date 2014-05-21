@@ -1,0 +1,6 @@
+#!/bin/sh
+
+c++filt < stacks.out > demangled.out
+stackvis dtrace flamegraph-svg  < demangled.out  > stacks.svg
+cat /opt/www/process_stats.log | ghcopy -f process_stats.log
+cat /opt/www/stacks.svg | ghcopy -f stacks.svg
