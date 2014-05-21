@@ -72,6 +72,9 @@ module.exports = exports = function () {
     },
     unregister: function (uuid) {
       delete openSockets[uuid];
+    },
+    get: function (uuid) {
+      return openSockets[uuid];
     }
   };
 };
