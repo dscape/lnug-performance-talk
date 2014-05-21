@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'start_remote' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose run-script [ 'prestart_remote', 'start_remote', 'poststart_remote' ]
+5 info prestart_remote simplechat@0.0.0-4
+6 info start_remote simplechat@0.0.0-4
+7 verbose unsafe-perm in lifecycle true
+8 info simplechat@0.0.0-4 Failed to exec start_remote script
+9 error simplechat@0.0.0-4 start_remote: `ssh root@webrebels.yld.io 'cd /opt/www && npm start'`
+9 error Exit status 1
+10 error Failed at the simplechat@0.0.0-4 start_remote script.
+10 error This is most likely a problem with the simplechat package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     ssh root@webrebels.yld.io 'cd /opt/www && npm start'
+10 error You can get their info via:
+10 error     npm owner ls simplechat
+10 error There is likely additional logging output above.
+11 error System Darwin 13.1.0
+12 error command "node" "/usr/local/bin/npm" "run" "start_remote"
+13 error cwd /Users/dscape/Desktop/dev/dscape/wb14/chat
+14 error node -v v0.10.26
+15 error npm -v 1.4.3
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]
