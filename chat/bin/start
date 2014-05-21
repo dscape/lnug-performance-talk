@@ -1,0 +1,15 @@
+#!/bin/sh
+
+npm install -g stackvis
+npm install -g ghcopy
+cd /opt/www
+./bin/process_stats &
+dtrace -n 'profile-97/execname == "node" && arg1/{
+  @[jstack(150, 8000)] = count(); } tick-60s { exit(0); }' > stacks.out &
+npm start
+c++filt < stacks.out > demangled.out
+stackvis dtrace flamegraph-svg  < demangled.out  > stacks.svg
+cat /opt/www/process_stats.log | ghcopy -f process_stats.log
+cat /opt/www/stacks.svg | ghcopy -f stacks.svg
+
+echo "science cat out!"
