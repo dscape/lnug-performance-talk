@@ -8,8 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js 80",
     "deploy": "rsync -ru * root@webrebels.yld.io:/opt/www",
-    "experiment": "ssh root@webrebels.yld.io ./bin/start",
-    "artillery": "./bin/artillery"
+    "experiment": "ssh root@webrebels.yld.io /opt/www/bin/start",
+    "artillery": "./bin/artillery load_test.js",
+    "results": "ssh root@webrebels.yld.io /opt/www/bin/results"
   },
   "repository": "",
   "author": "nuno job @dscape",

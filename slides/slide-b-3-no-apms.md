@@ -1,7 +1,7 @@
 
   # we are not going to do that
 
-    * it's easy and boring
+    * it's easy, it's boring
 
 
 

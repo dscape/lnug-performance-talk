@@ -1,5 +1,5 @@
 
-  # sample Case #1
+  # sample case #1
 
     * application crashing in production hundreds
       of times a day

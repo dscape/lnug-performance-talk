@@ -10,7 +10,7 @@
 
     * iz it truly web-scale sauce?
 
-    * how can I support this thing in production
+    * how can i support this thing in production
       and avoid disaster?
 
 

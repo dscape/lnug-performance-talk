@@ -1,2 +1,3 @@
 #!/bin/sh
 
+curl -X POST -F "script=@$1" "http://api.artillery.io/api/run?api_key=$ARTILLERY_API_KEY"
