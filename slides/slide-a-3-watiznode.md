@@ -5,7 +5,7 @@
     * everyone knows
     * please, don't...
 
-    * ok, lets do robots instead
+    * ok, lets do something else instead
 
 
 

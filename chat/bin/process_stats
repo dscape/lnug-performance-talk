@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sleep 10
+sleep 3
 PROCESSPID=`pgrep -f node`
 while [ 1 ]
 do
@@ -10,4 +10,4 @@ do
     VSZ=`/usr/bin/ps -o vsz -p $PROCESSPID | tail -n +2`
     echo "`date`\t`date +%s`\t$CPU\t$RSS\t$VSZ\t$NUMCON"
     sleep 3
-done > /opt/www/process_stats.log 2>&1
+done | tee -a /opt/www/process_stats.log 2>&1

@@ -1,14 +1,10 @@
-
   # first steps
 
     * install some apms: newrelic, strongops
-      (also see github.com/lloyd/node-toobusy)
+      > github.com/lloyd/node-toobusy
 
   ## important
-
       * apms hurt your performance
-        this is not up for debate people, we always remove it
-        to benchmark cause it does show up
 
       * either:
           1. have a staging environment to test against

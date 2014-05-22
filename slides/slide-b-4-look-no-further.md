@@ -2,7 +2,7 @@
   # what should i be looking at?
 
     * basics: cpu, mem, disk                [script]
-    * what routes are the slowest?          [apms]
+    * what code paths are the slowest?      [apms]
     * is the event loop blocked?
       for how long?  blocked why?           [dtrace, toobusy]
     * how many request are you handling?
