@@ -3,7 +3,7 @@
 
     * refactoring, security, npm, deployment
 
-     > github.com/dscape/wb14
+     > https://github.com/yldio/lnug-performance-talk
 
      ___________
     < thank you, any questions? >
