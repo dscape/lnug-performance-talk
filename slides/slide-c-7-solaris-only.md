@@ -2,7 +2,7 @@
 
 
 
-    ಠ_ಠ  solaris Only?
+    ಠ_ಠ  solaris only?
 
 
 

@@ -3,9 +3,9 @@
 # npm install -g stackvis@0.2.0
 # npm install -g ghcopy@0.3.0
 cd /opt/www
-dtrace -n 'profile-97/execname == "node" && arg1/{
-  @[jstack(150, 8000)] = count(); } tick-60s { exit(0); }' > stacks.out &
 rm -f /opt/www/process_stats.log
 pkill -9 node
-./bin/process_stats &
-node server.js 80
+./bin/process_stats 2>&1 /dev/null &
+dtrace -n 'profile-97/execname == "node" && arg1/{
+  @[jstack(150, 8000)] = count(); } tick-60s { exit(0); }' > stacks.out &
+/opt/local/bin/node server.js 80

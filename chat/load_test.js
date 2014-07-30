@@ -1,5 +1,5 @@
 artillery.servers([
-  {host: 'webrebels.yld.io', port: 80}
+  {host: 'demo.yld.io', port: 80}
 ]);
 
 artillery.load([

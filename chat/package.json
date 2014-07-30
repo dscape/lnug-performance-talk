@@ -7,10 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js 80",
-    "deploy": "rsync -ru * root@webrebels.yld.io:/opt/www",
-    "experiment": "ssh root@webrebels.yld.io /opt/www/bin/start",
+    "deploy": "rsync -ru * root@demo.yld.io:/opt/www",
+    "experiment": "ssh root@demo.yld.io /opt/www/bin/start",
     "artillery": "./bin/artillery load_test.js",
-    "results": "ssh root@webrebels.yld.io /opt/www/bin/results"
+    "results": "ssh root@demo.yld.io /opt/www/bin/results"
   },
   "repository": "",
   "author": "nuno job @dscape",
